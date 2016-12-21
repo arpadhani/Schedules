@@ -15,7 +15,8 @@
 		08137CA31DF7D8A00006ACE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08137CA21DF7D8A00006ACE7 /* GoogleService-Info.plist */; };
 		086993971E0116120022D439 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086993961E0116120022D439 /* Week.swift */; };
 		0869939C1E0269ED0022D439 /* ItemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869939B1E0269ED0022D439 /* ItemCellTableViewCell.swift */; };
-		088DFA0A1DF7DF83008338E5 /* GMATSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFA091DF7DF83008338E5 /* GMATSchedule.swift */; };
+		0869939E1E0A47660022D439 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869939D1E0A47660022D439 /* SubjectViewController.swift */; };
+		086993A01E0A47A60022D439 /* SubjectScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869939F1E0A47A60022D439 /* SubjectScheduleViewController.swift */; };
 		088DFA0C1DF7DF9D008338E5 /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFA0B1DF7DF9D008338E5 /* WeekViewController.swift */; };
 		088DFA0E1DF7DFAB008338E5 /* WeekScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088DFA0D1DF7DFAB008338E5 /* WeekScheduleViewController.swift */; };
 		08A687951DF93DEF00652BE4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A687941DF93DEF00652BE4 /* Item.swift */; };
@@ -33,7 +34,8 @@
 		08137CA21DF7D8A00006ACE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		086993961E0116120022D439 /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		0869939B1E0269ED0022D439 /* ItemCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellTableViewCell.swift; sourceTree = "<group>"; };
-		088DFA091DF7DF83008338E5 /* GMATSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMATSchedule.swift; sourceTree = "<group>"; };
+		0869939D1E0A47660022D439 /* SubjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		0869939F1E0A47A60022D439 /* SubjectScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectScheduleViewController.swift; sourceTree = "<group>"; };
 		088DFA0B1DF7DF9D008338E5 /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		088DFA0D1DF7DFAB008338E5 /* WeekScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekScheduleViewController.swift; sourceTree = "<group>"; };
 		08A687941DF93DEF00652BE4 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -75,13 +77,14 @@
 		08137C8C1DF7D8470006ACE7 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				08137C8D1DF7D8470006ACE7 /* AppDelegate.swift */,
-				088DFA091DF7DF83008338E5 /* GMATSchedule.swift */,
+				0869939D1E0A47660022D439 /* SubjectViewController.swift */,
+				0869939F1E0A47A60022D439 /* SubjectScheduleViewController.swift */,
 				088DFA0B1DF7DF9D008338E5 /* WeekViewController.swift */,
 				088DFA0D1DF7DFAB008338E5 /* WeekScheduleViewController.swift */,
 				0869939A1E0269D00022D439 /* Views */,
 				086993981E0269AD0022D439 /* Models */,
 				086993991E0269BE0022D439 /* UI */,
+				08137C8D1DF7D8470006ACE7 /* AppDelegate.swift */,
 				08137C9C1DF7D8470006ACE7 /* Info.plist */,
 				08137C941DF7D8470006ACE7 /* Schedule.xcdatamodeld */,
 				08137CA21DF7D8A00006ACE7 /* GoogleService-Info.plist */,
@@ -259,13 +262,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0869939C1E0269ED0022D439 /* ItemCellTableViewCell.swift in Sources */,
+				0869939E1E0A47660022D439 /* SubjectViewController.swift in Sources */,
 				08137C961DF7D8470006ACE7 /* Schedule.xcdatamodeld in Sources */,
 				08137C8E1DF7D8470006ACE7 /* AppDelegate.swift in Sources */,
 				086993971E0116120022D439 /* Week.swift in Sources */,
 				088DFA0E1DF7DFAB008338E5 /* WeekScheduleViewController.swift in Sources */,
+				086993A01E0A47A60022D439 /* SubjectScheduleViewController.swift in Sources */,
 				088DFA0C1DF7DF9D008338E5 /* WeekViewController.swift in Sources */,
 				08A687951DF93DEF00652BE4 /* Item.swift in Sources */,
-				088DFA0A1DF7DF83008338E5 /* GMATSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

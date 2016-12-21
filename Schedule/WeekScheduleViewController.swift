@@ -47,7 +47,7 @@ class WeekScheduleViewController: UIViewController {
 
 extension WeekScheduleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        //there will need to be some tailoring done here to allow users to select items/tasks. 
         if let itemDone = UserDefaults.standard.value(forKey: "\(items[indexPath.row].ID)") {
             UserDefaults.standard.setValue(!(itemDone as! Bool), forKey: "\(items[indexPath.row].ID)")
         }else {

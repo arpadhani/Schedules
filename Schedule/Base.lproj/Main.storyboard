@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Schedule-->
+        <!--Subject Schedule View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GMATSchedule" customModule="Schedule" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SubjectScheduleViewController" customModule="Schedule" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -48,13 +48,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="XK6-pC-KPe"/>
                     <connections>
-                        <outlet property="gmatTableView" destination="nlV-rI-VaL" id="CDI-gV-EEv"/>
-                        <segue destination="N4v-4T-hlc" kind="show" identifier="SegueToWeek" id="rj7-SO-T4k"/>
+                        <outlet property="scheduleTableView" destination="nlV-rI-VaL" id="ogN-bM-YXm"/>
+                        <segue destination="N4v-4T-hlc" kind="show" identifier="SegueToWeeks" id="rj7-SO-T4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="-636"/>
+            <point key="canvasLocation" x="900" y="-636"/>
         </scene>
         <!--Week View Controller-->
         <scene sceneID="QXU-Qs-NfS">
@@ -194,7 +194,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Kj-9r-uaZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="65w-Or-2jw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="65w-Or-2jw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,12 +205,57 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="j3e-jb-Pnz"/>
+                        <segue destination="vIW-7z-yL1" kind="relationship" relationship="rootViewController" id="W1q-8x-xdu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeK-Dq-OA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="-635.53223388305855"/>
+            <point key="canvasLocation" x="-698" y="-636"/>
+        </scene>
+        <!--Subject View Controller-->
+        <scene sceneID="bp3-wP-9hm">
+            <objects>
+                <viewController id="vIW-7z-yL1" customClass="SubjectViewController" customModule="Schedule" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cHT-jo-B5g"/>
+                        <viewControllerLayoutGuide type="bottom" id="HGs-v3-WJ9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="51B-uz-Sv6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QFu-9b-4pJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SUBJECTCELL" id="Rxu-fj-CQw">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rxu-fj-CQw" id="ilj-ww-PEh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QFu-9b-4pJ" secondAttribute="trailing" id="9mr-nB-b3v"/>
+                            <constraint firstItem="HGs-v3-WJ9" firstAttribute="top" secondItem="QFu-9b-4pJ" secondAttribute="bottom" id="NAR-tg-II7"/>
+                            <constraint firstItem="QFu-9b-4pJ" firstAttribute="top" secondItem="cHT-jo-B5g" secondAttribute="bottom" constant="-64" id="iH2-lY-Vuy"/>
+                            <constraint firstItem="QFu-9b-4pJ" firstAttribute="leading" secondItem="51B-uz-Sv6" secondAttribute="leading" id="pED-ZL-bGd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z0c-oy-8HQ"/>
+                    <connections>
+                        <outlet property="subjectTableView" destination="QFu-9b-4pJ" id="hfm-k6-IyO"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SegueToSubjectSchedule" id="SGm-qB-fte"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzj-JO-uNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="-636.4317841079461"/>
         </scene>
     </scenes>
 </document>

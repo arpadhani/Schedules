@@ -15,13 +15,13 @@ class WeekViewController: UIViewController {
     var weeks = [Week]()
     let ref = FIRDatabase.database().reference()
     
-    var gmatScheduleType: String? {
+    var scheduleType: String? {
         didSet {
-            if gmatScheduleType == "6 Month GMAT" {
-                download6monthGmat()
+            if scheduleType == "6 Month GMAT" {
+                download6monthGmat() //this method needs to be tailored to specific schedules
                 self.title = "GMAT Schedules"
             }
-            self.title = gmatScheduleType!
+            self.title = scheduleType!
         }
     }
     
@@ -36,6 +36,11 @@ class WeekViewController: UIViewController {
         super.viewDidAppear(animated)
         weekTableView.reloadData()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = "Weeks"
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,7 +48,6 @@ class WeekViewController: UIViewController {
     }
     
     func download6monthGmat() {
-        
         ref.child("6MonthGMAT") .observeSingleEvent(of: .value) { (snapshot:FIRDataSnapshot) in
             
             for weekIterator in snapshot.children.allObjects as! [FIRDataSnapshot] {
@@ -90,7 +94,6 @@ class WeekViewController: UIViewController {
 extension WeekViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let items = weeks[indexPath.row].items
-        self.title = weeks[indexPath.row].week
         self.performSegue(withIdentifier: "SegueToWeekSchedule", sender: items)
         
     }
